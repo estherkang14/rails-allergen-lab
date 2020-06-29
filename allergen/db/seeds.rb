@@ -11,6 +11,8 @@ require 'faker'
 User.destroy_all
 Recipe.destroy_all
 Ingredient.destroy_all
+Allergy.destroy_all
+RecipeIngredient.destroy_all
 
 
 10.times do 
@@ -18,7 +20,7 @@ Ingredient.destroy_all
 end
 
 20.times do 
-    Recipe.create(name: Faker::Food.dish, user_id: User.all.sample)
+    Recipe.create(name: Faker::Food.dish, user: User.all.sample)
 end
 
 30.times do
@@ -26,9 +28,10 @@ end
 end
 
 20.times do
-    Allergen.create(user_id: User.all.sample, ingredient_id: Ingredient.all.sample)
+
+    Allergy.create(user: User.all.sample, ingredient: Ingredient.all.sample)
 end
 
 20.times do
-    RecipeIngredient.create(recipe_id: Recipe.all.sample,ingredient_id: Ingredient.all.sample)
+    RecipeIngredient.create(recipe: Recipe.all.sample,ingredient: Ingredient.all.sample)
 end

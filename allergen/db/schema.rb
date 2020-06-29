@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2020_06_29_151221) do
 
-  create_table "allergens", force: :cascade do |t|
+  create_table "allergies", force: :cascade do |t|
     t.integer "user_id"
     t.integer "ingredient_id"
   end
