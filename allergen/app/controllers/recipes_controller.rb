@@ -17,7 +17,9 @@ class RecipesController < ApplicationController
         redirect_to recipe_path(@recipe.id) 
     end 
 
-    def destory
+    def destroy
+        @recipe.destroy
+        redirect_to recipes_path
     end 
 
     private

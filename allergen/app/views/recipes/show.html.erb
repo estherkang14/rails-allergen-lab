@@ -6,4 +6,6 @@
                 <li> <%= link_to ingredient.name, ingredient_path(ingredient.id) %> </li>
             <% end %>
         </ul>
-        
+<%= link_to "Go back to recipes", recipes_path %>
+<%= button_to "Delete this recipe", recipe_path(@recipe.id), method: :delete, data: {confirm: "Are you sure?"} %>
+
