@@ -11,8 +11,6 @@ require 'faker'
 User.destroy_all
 Recipe.destroy_all
 Ingredient.destroy_all
-Allergen.destroy_all
-RecipeIngredient.destroy_all
 
 
 10.times do 
