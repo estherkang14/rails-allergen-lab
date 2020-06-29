@@ -1,0 +1,21 @@
+<h1><%= @ingredient.name %></h1>
+
+<div id="ingredient_info">
+    <h2>Recipe's using <%= @ingredient.name %>:</h2>
+        <% if @ingredient.recipes.count >= 1 %>
+            <ul>
+                <% @ingredient.recipes.each do |recipe| %>
+                <li><%= link_to recipe.name, recipe_path(recipe.id) %></li>
+                <% end %>
+            </ul>
+        <% else %>
+            <strong>No recipes yet</strong>
+        <% end %>
+</div>
+<br>
+<div id="actions">
+    <%= button_to "Delete this Ingredient", ingredient_path(@ingredient.id), method: :delete, data: {confirm: "Are you sure?"} %><br>
+    <%= link_to "Add a Recipe", new_recipe_path %><br>
+    <%= link_to "View All Ingredients", ingredients_path %><br>
+    <%= link_to "Edit Ingredient", edit_ingredient_path %>
+</div>

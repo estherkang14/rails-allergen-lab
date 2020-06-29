@@ -1,0 +1,16 @@
+<h1>List of All Ingredients</h1>
+
+
+
+<div id="all_ingredients">
+    <ul>
+        <% @ingredients.each do |ingredient| %>
+            <li><%= link_to ingredient.name, ingredient_path(ingredient.id) %></li>
+        <% end %>
+    </ul>
+</div> 
+
+<div id="actions">
+    <%= link_to "Add an Ingredient", new_ingredient_path %><br>
+    <%= link_to "View Recipes", recipes_path %>
+</div>
