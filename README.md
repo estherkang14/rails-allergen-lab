@@ -16,9 +16,14 @@ In this project, we will be practicing object relationships in Rails. We will be
 
 ### `Ingredient`
 
+<!-- go through allergies table  -->
+
 - `index` should show all ingredients, sorted by the number of users allergic to it. For example, if several users are allergic to peanut butter, it should appear higher on the list. You might want to look into [ActiveRecord Query Methods](https://guides.rubyonrails.org/active_record_querying.html)
 - `show` a particular ingredient. I should be able to see all of the recipes that an ingredient appears in
 
 ### `**Bonus**`
 
 - Add [bootstrap for styling](https://getbootstrap.com/docs/4.1/getting-started/introduction/)
+
+
+

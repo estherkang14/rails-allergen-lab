@@ -15,7 +15,13 @@ class RecipesController < ApplicationController
     def create
         @recipe = Recipe.create(strong_params)
         redirect_to recipe_path(@recipe.id) 
-    end 
+    end
+    
+    def edit
+    end
+
+    def update
+    end
 
     def destroy
         @recipe.destroy
