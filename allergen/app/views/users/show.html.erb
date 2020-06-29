@@ -1,0 +1,14 @@
+<h1><%= @user.name%>'s Recipes</h1>
+
+<div id="users_recipes">
+    <ul>
+        <% @user.recipes.each do |recipe| %>
+            <li><%= link_to recipe.name, recipe_path(recipe.id) %></li>
+        <% end %>
+    </ul>
+</div> 
+
+<div id="actions">
+    <%= link_to "Delete this User", user_path(@user.id), :method => :delete, data: {confirm: "Are you sure?"} %><br>
+    <%= link_to "View All Users", users_path %> 
+</div>
